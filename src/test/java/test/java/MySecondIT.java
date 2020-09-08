@@ -42,6 +42,18 @@ public class MySecondIT {
     }
 
     @Test
+    public void testSubstract(){
+        //Given
+        Calculator calculator = new Calculator();
+
+        //When
+        Integer sub = calculator.subtract(a,b,c);
+
+        //Then
+        assertEquals(-50, sub);
+    }
+
+    @Test
     public void testMultiply() {
         // GIVEN
         Calculator calculator = new Calculator();
@@ -54,8 +66,6 @@ public class MySecondIT {
         assertTrue( m == 24000 );
     }
 
-    @Tag("regression")
-    @Tag("security")
     @Test
     public void testSum() {
         // GIVEN
